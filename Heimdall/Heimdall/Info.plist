@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppDumpDatabasePath</key>
+	<string>/var/mobile/Documents/appDump.sqlite3</string>
+	<key>DaemonLabel</key>
+	<string>de.tomcory.portresolver</string>
+	<key>DaemonLable</key>
+	<string>de.tomcory.portresolver</string>
+	<key>DaemonPlistPath</key>
+	<string>/var/jb/Library/LaunchDaemons/</string>
+	<key>HeimdallDatabasePath</key>
+	<string>/var/mobile/Documents/heimdall.sqlite3</string>
+	<key>PATH</key>
+	<string>/usr/local/sbin:/var/jb/usr/local/sbin:/usr/local/bin:/var/jb/usr/local/bin:/usr/sbin:/var/jb/usr/sbin:/usr/bin:/var/jb/usr/bin:/sbin:/var/jb/sbin:/bin:/var/jb/bin</string>
+	<key>SHELL</key>
+	<string>/var/jb/usr/bin/sh</string>
+</dict>
+</plist>

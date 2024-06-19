@@ -1,0 +1,9 @@
+Package: de.tomcory.heimdall
+Name: Heimdall
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Description: An awesome application!
+Maintainer: Benjamin Appendino
+Author: Benjamin Appendino
+Section: Utilities
+Depends: firmware (>= 12.2) | ${LIBSWIFT}

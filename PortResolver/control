@@ -1,0 +1,10 @@
+Package: de.tomcory.portresolver
+Name: portresolver
+Depends: 
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Daemon for resolving ports to BundleIDs (Obj-C)
+Maintainer: Benjamin Appendino<b.appendino@campus.tu-berlin.de>
+Author: Benjamin Appendino<b.appendino@campus.tu-berlin.de>
+Section: System
+Tag: role::hacker

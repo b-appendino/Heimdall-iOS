@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1199A562B9B6B9C0092B3C1 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1199A552B9B6B9C0092B3C1 /* ConfigService.swift */; };
+		B13B59472BA48C8000251186 /* ConnectionLoggingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B59462BA48C8000251186 /* ConnectionLoggingHandler.swift */; };
+		B1A705812AD7EB3C007D4232 /* VPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A705802AD7EB3C007D4232 /* VPNService.swift */; };
+		B1A705832AD7EF20007D4232 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A705822AD7EF20007D4232 /* SettingsView.swift */; };
+		B1A705852AD7EF60007D4232 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A705842AD7EF60007D4232 /* SettingsViewModel.swift */; };
+		B1A705872ADD8101007D4232 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A705862ADD8101007D4232 /* ContentView.swift */; };
+		B1CB3F272A86986400505BEE /* HeimdallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F262A86986400505BEE /* HeimdallApp.swift */; };
+		B1CB3F2B2A86986800505BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CB3F2A2A86986800505BEE /* Assets.xcassets */; };
+		B1CB3F2E2A86986800505BEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CB3F2D2A86986800505BEE /* Preview Assets.xcassets */; };
+		B1CB3F3C2A8698E900505BEE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CB3F3B2A8698E900505BEE /* NetworkExtension.framework */; };
+		B1CB3F3F2A8698E900505BEE /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F3E2A8698E900505BEE /* PacketTunnelProvider.swift */; };
+		B1CB3F442A8698E900505BEE /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B1CB3F392A8698E900505BEE /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B1CB3F572A8A50B700505BEE /* RequestInfoNotificationEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F4B2A8A50B700505BEE /* RequestInfoNotificationEmitter.swift */; };
+		B1CB3F582A8A50B700505BEE /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F4D2A8A50B700505BEE /* ConnectionHandler.swift */; };
+		B1CB3F592A8A50B700505BEE /* HTTPChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F4E2A8A50B700505BEE /* HTTPChannelHandler.swift */; };
+		B1CB3F5A2A8A50B700505BEE /* TLSChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F4F2A8A50B700505BEE /* TLSChannelHandler.swift */; };
+		B1CB3F5B2A8A50B700505BEE /* HTTPBodyCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F502A8A50B700505BEE /* HTTPBodyCache.swift */; };
+		B1CB3F5C2A8A50B700505BEE /* GlueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F512A8A50B700505BEE /* GlueHandler.swift */; };
+		B1CB3F5D2A8A50B700505BEE /* ConnectProxyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F522A8A50B700505BEE /* ConnectProxyError.swift */; };
+		B1CB3F5E2A8A50B700505BEE /* ProxyServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F542A8A50B700505BEE /* ProxyServer.swift */; };
+		B1CB3F5F2A8A50B700505BEE /* ProxyServer+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F552A8A50B700505BEE /* ProxyServer+Notification.swift */; };
+		B1CB3F602A8A50B700505BEE /* ProxyServer+MiTM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB3F562A8A50B700505BEE /* ProxyServer+MiTM.swift */; };
+		B1CB3F652A8A58F900505BEE /* NIOFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = B1CB3F642A8A58F900505BEE /* NIOFoundationCompat */; };
+		B1CB3F672A8A58F900505BEE /* NIOHTTP1 in Frameworks */ = {isa = PBXBuildFile; productRef = B1CB3F662A8A58F900505BEE /* NIOHTTP1 */; };
+		B1CB3F6A2A8A6AB100505BEE /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = B1CB3F692A8A6AB100505BEE /* Logging */; };
+		B1E1C9B82BA05D5C00F18ACB /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1199A552B9B6B9C0092B3C1 /* ConfigService.swift */; };
+		B1E7090F2B7CE1650057CF78 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = B1E7090E2B7CE1650057CF78 /* GRDB */; };
+		B1E709112B7CE1830057CF78 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = B1E709102B7CE1830057CF78 /* GRDB */; };
+		B1EC85F32AFAA0470007B654 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC85F22AFAA0470007B654 /* DBService.swift */; };
+		B1EC85F42AFAA06D0007B654 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC85F22AFAA0470007B654 /* DBService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1CB3F422A8698E900505BEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1CB3F1B2A86986400505BEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1CB3F382A8698E900505BEE;
+			remoteInfo = PacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B1CB3F482A8698E900505BEE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B1CB3F442A8698E900505BEE /* PacketTunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B1199A552B9B6B9C0092B3C1 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		B13B59462BA48C8000251186 /* ConnectionLoggingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLoggingHandler.swift; sourceTree = "<group>"; };
+		B19E89822AFE74E300CA0CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B1A705802AD7EB3C007D4232 /* VPNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNService.swift; sourceTree = "<group>"; };
+		B1A705822AD7EF20007D4232 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B1A705842AD7EF60007D4232 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		B1A705862ADD8101007D4232 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B1CB3F232A86986400505BEE /* Heimdall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heimdall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1CB3F262A86986400505BEE /* HeimdallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeimdallApp.swift; sourceTree = "<group>"; };
+		B1CB3F2A2A86986800505BEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1CB3F2D2A86986800505BEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B1CB3F342A86988100505BEE /* Heimdall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Heimdall.entitlements; sourceTree = "<group>"; };
+		B1CB3F392A8698E900505BEE /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1CB3F3B2A8698E900505BEE /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		B1CB3F3E2A8698E900505BEE /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		B1CB3F402A8698E900505BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1CB3F412A8698E900505BEE /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		B1CB3F4B2A8A50B700505BEE /* RequestInfoNotificationEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInfoNotificationEmitter.swift; sourceTree = "<group>"; };
+		B1CB3F4D2A8A50B700505BEE /* ConnectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
+		B1CB3F4E2A8A50B700505BEE /* HTTPChannelHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPChannelHandler.swift; sourceTree = "<group>"; };
+		B1CB3F4F2A8A50B700505BEE /* TLSChannelHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLSChannelHandler.swift; sourceTree = "<group>"; };
+		B1CB3F502A8A50B700505BEE /* HTTPBodyCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPBodyCache.swift; sourceTree = "<group>"; };
+		B1CB3F512A8A50B700505BEE /* GlueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlueHandler.swift; sourceTree = "<group>"; };
+		B1CB3F522A8A50B700505BEE /* ConnectProxyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectProxyError.swift; sourceTree = "<group>"; };
+		B1CB3F542A8A50B700505BEE /* ProxyServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyServer.swift; sourceTree = "<group>"; };
+		B1CB3F552A8A50B700505BEE /* ProxyServer+Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProxyServer+Notification.swift"; sourceTree = "<group>"; };
+		B1CB3F562A8A50B700505BEE /* ProxyServer+MiTM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProxyServer+MiTM.swift"; sourceTree = "<group>"; };
+		B1DFA8262AD048020057761D /* NSTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTask.h; sourceTree = "<group>"; };
+		B1DFA8292AD04F130057761D /* Heimdall-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Heimdall-Bridging-Header.h"; sourceTree = "<group>"; };
+		B1EC85F22AFAA0470007B654 /* DBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1CB3F202A86986400505BEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1E7090F2B7CE1650057CF78 /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1CB3F362A8698E900505BEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1CB3F672A8A58F900505BEE /* NIOHTTP1 in Frameworks */,
+				B1CB3F652A8A58F900505BEE /* NIOFoundationCompat in Frameworks */,
+				B1E709112B7CE1830057CF78 /* GRDB in Frameworks */,
+				B1CB3F6A2A8A6AB100505BEE /* Logging in Frameworks */,
+				B1CB3F3C2A8698E900505BEE /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1CB3F1A2A86986400505BEE = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F252A86986400505BEE /* Heimdall */,
+				B1CB3F3D2A8698E900505BEE /* PacketTunnel */,
+				B1CB3F3A2A8698E900505BEE /* Frameworks */,
+				B1CB3F242A86986400505BEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1CB3F242A86986400505BEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F232A86986400505BEE /* Heimdall.app */,
+				B1CB3F392A8698E900505BEE /* PacketTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1CB3F252A86986400505BEE /* Heimdall */ = {
+			isa = PBXGroup;
+			children = (
+				B19E89822AFE74E300CA0CCE /* Info.plist */,
+				B1CB3F342A86988100505BEE /* Heimdall.entitlements */,
+				B1CB3F262A86986400505BEE /* HeimdallApp.swift */,
+				B1A705862ADD8101007D4232 /* ContentView.swift */,
+				B1A705822AD7EF20007D4232 /* SettingsView.swift */,
+				B1A705842AD7EF60007D4232 /* SettingsViewModel.swift */,
+				B1A705802AD7EB3C007D4232 /* VPNService.swift */,
+				B1EC85F22AFAA0470007B654 /* DBService.swift */,
+				B1199A552B9B6B9C0092B3C1 /* ConfigService.swift */,
+				B1DFA8292AD04F130057761D /* Heimdall-Bridging-Header.h */,
+				B1DFA8262AD048020057761D /* NSTask.h */,
+				B1CB3F2A2A86986800505BEE /* Assets.xcassets */,
+				B1CB3F2C2A86986800505BEE /* Preview Content */,
+			);
+			path = Heimdall;
+			sourceTree = "<group>";
+		};
+		B1CB3F2C2A86986800505BEE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F2D2A86986800505BEE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B1CB3F3A2A8698E900505BEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F3B2A8698E900505BEE /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1CB3F3D2A8698E900505BEE /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F3E2A8698E900505BEE /* PacketTunnelProvider.swift */,
+				B1CB3F492A8A50B700505BEE /* ProxyServer */,
+				B1CB3F402A8698E900505BEE /* Info.plist */,
+				B1CB3F412A8698E900505BEE /* PacketTunnel.entitlements */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		B1CB3F492A8A50B700505BEE /* ProxyServer */ = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F4A2A8A50B700505BEE /* Internal */,
+				B1CB3F532A8A50B700505BEE /* API */,
+			);
+			path = ProxyServer;
+			sourceTree = "<group>";
+		};
+		B1CB3F4A2A8A50B700505BEE /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F4B2A8A50B700505BEE /* RequestInfoNotificationEmitter.swift */,
+				B1CB3F4C2A8A50B700505BEE /* ConnectionHandler */,
+				B1CB3F502A8A50B700505BEE /* HTTPBodyCache.swift */,
+				B1CB3F512A8A50B700505BEE /* GlueHandler.swift */,
+				B1CB3F522A8A50B700505BEE /* ConnectProxyError.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		B1CB3F4C2A8A50B700505BEE /* ConnectionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B13B59462BA48C8000251186 /* ConnectionLoggingHandler.swift */,
+				B1CB3F4D2A8A50B700505BEE /* ConnectionHandler.swift */,
+				B1CB3F4E2A8A50B700505BEE /* HTTPChannelHandler.swift */,
+				B1CB3F4F2A8A50B700505BEE /* TLSChannelHandler.swift */,
+			);
+			path = ConnectionHandler;
+			sourceTree = "<group>";
+		};
+		B1CB3F532A8A50B700505BEE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B1CB3F542A8A50B700505BEE /* ProxyServer.swift */,
+				B1CB3F552A8A50B700505BEE /* ProxyServer+Notification.swift */,
+				B1CB3F562A8A50B700505BEE /* ProxyServer+MiTM.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1CB3F222A86986400505BEE /* Heimdall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1CB3F312A86986800505BEE /* Build configuration list for PBXNativeTarget "Heimdall" */;
+			buildPhases = (
+				B1CB3F1F2A86986400505BEE /* Sources */,
+				B1CB3F202A86986400505BEE /* Frameworks */,
+				B1CB3F212A86986400505BEE /* Resources */,
+				B1CB3F482A8698E900505BEE /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1CB3F432A8698E900505BEE /* PBXTargetDependency */,
+			);
+			name = Heimdall;
+			packageProductDependencies = (
+				B1E7090E2B7CE1650057CF78 /* GRDB */,
+			);
+			productName = Heimdall;
+			productReference = B1CB3F232A86986400505BEE /* Heimdall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1CB3F382A8698E900505BEE /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1CB3F452A8698E900505BEE /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				B1CB3F352A8698E900505BEE /* Sources */,
+				B1CB3F362A8698E900505BEE /* Frameworks */,
+				B1CB3F372A8698E900505BEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			packageProductDependencies = (
+				B1CB3F642A8A58F900505BEE /* NIOFoundationCompat */,
+				B1CB3F662A8A58F900505BEE /* NIOHTTP1 */,
+				B1CB3F692A8A6AB100505BEE /* Logging */,
+				B1E709102B7CE1830057CF78 /* GRDB */,
+			);
+			productName = PacketTunnel;
+			productReference = B1CB3F392A8698E900505BEE /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1CB3F1B2A86986400505BEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B1CB3F222A86986400505BEE = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+					};
+					B1CB3F382A8698E900505BEE = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+					};
+				};
+			};
+			buildConfigurationList = B1CB3F1E2A86986400505BEE /* Build configuration list for PBXProject "Heimdall" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1CB3F1A2A86986400505BEE;
+			packageReferences = (
+				B1CB3F612A8A58F900505BEE /* XCRemoteSwiftPackageReference "swift-nio" */,
+				B1CB3F682A8A6AB100505BEE /* XCRemoteSwiftPackageReference "swift-log" */,
+				B1E7090D2B7CE1650057CF78 /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
+			productRefGroup = B1CB3F242A86986400505BEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1CB3F222A86986400505BEE /* Heimdall */,
+				B1CB3F382A8698E900505BEE /* PacketTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1CB3F212A86986400505BEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1CB3F2E2A86986800505BEE /* Preview Assets.xcassets in Resources */,
+				B1CB3F2B2A86986800505BEE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1CB3F372A8698E900505BEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1CB3F1F2A86986400505BEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1A705852AD7EF60007D4232 /* SettingsViewModel.swift in Sources */,
+				B1A705872ADD8101007D4232 /* ContentView.swift in Sources */,
+				B1199A562B9B6B9C0092B3C1 /* ConfigService.swift in Sources */,
+				B1A705832AD7EF20007D4232 /* SettingsView.swift in Sources */,
+				B1EC85F32AFAA0470007B654 /* DBService.swift in Sources */,
+				B1A705812AD7EB3C007D4232 /* VPNService.swift in Sources */,
+				B1CB3F272A86986400505BEE /* HeimdallApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1CB3F352A8698E900505BEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1CB3F5D2A8A50B700505BEE /* ConnectProxyError.swift in Sources */,
+				B1CB3F5C2A8A50B700505BEE /* GlueHandler.swift in Sources */,
+				B13B59472BA48C8000251186 /* ConnectionLoggingHandler.swift in Sources */,
+				B1CB3F5F2A8A50B700505BEE /* ProxyServer+Notification.swift in Sources */,
+				B1CB3F5B2A8A50B700505BEE /* HTTPBodyCache.swift in Sources */,
+				B1CB3F3F2A8698E900505BEE /* PacketTunnelProvider.swift in Sources */,
+				B1CB3F5A2A8A50B700505BEE /* TLSChannelHandler.swift in Sources */,
+				B1CB3F5E2A8A50B700505BEE /* ProxyServer.swift in Sources */,
+				B1CB3F572A8A50B700505BEE /* RequestInfoNotificationEmitter.swift in Sources */,
+				B1E1C9B82BA05D5C00F18ACB /* ConfigService.swift in Sources */,
+				B1CB3F592A8A50B700505BEE /* HTTPChannelHandler.swift in Sources */,
+				B1EC85F42AFAA06D0007B654 /* DBService.swift in Sources */,
+				B1CB3F582A8A50B700505BEE /* ConnectionHandler.swift in Sources */,
+				B1CB3F602A8A50B700505BEE /* ProxyServer+MiTM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1CB3F432A8698E900505BEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1CB3F382A8698E900505BEE /* PacketTunnel */;
+			targetProxy = B1CB3F422A8698E900505BEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B1CB3F2F2A86986800505BEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1CB3F302A86986800505BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1CB3F322A86986800505BEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Heimdall/Heimdall.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heimdall/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8ZKQR7L669;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Heimdall/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tomcory.heimdall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Heimdall Development";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Heimdall/Heimdall-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1CB3F332A86986800505BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Heimdall/Heimdall.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heimdall/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8ZKQR7L669;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Heimdall/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tomcory.heimdall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Heimdall Development";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Heimdall/Heimdall-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B1CB3F462A8698E900505BEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8ZKQR7L669;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tomcory.heimdall.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Heimdall Development";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1CB3F472A8698E900505BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8ZKQR7L669;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tomcory.heimdall.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Heimdall Development";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1CB3F1E2A86986400505BEE /* Build configuration list for PBXProject "Heimdall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1CB3F2F2A86986800505BEE /* Debug */,
+				B1CB3F302A86986800505BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1CB3F312A86986800505BEE /* Build configuration list for PBXNativeTarget "Heimdall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1CB3F322A86986800505BEE /* Debug */,
+				B1CB3F332A86986800505BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1CB3F452A8698E900505BEE /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1CB3F462A8698E900505BEE /* Debug */,
+				B1CB3F472A8698E900505BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1CB3F612A8A58F900505BEE /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		B1CB3F682A8A6AB100505BEE /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		B1E7090D2B7CE1650057CF78 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1CB3F642A8A58F900505BEE /* NIOFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1CB3F612A8A58F900505BEE /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOFoundationCompat;
+		};
+		B1CB3F662A8A58F900505BEE /* NIOHTTP1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1CB3F612A8A58F900505BEE /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOHTTP1;
+		};
+		B1CB3F692A8A6AB100505BEE /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1CB3F682A8A6AB100505BEE /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		B1E7090E2B7CE1650057CF78 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1E7090D2B7CE1650057CF78 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+		B1E709102B7CE1830057CF78 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1E7090D2B7CE1650057CF78 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B1CB3F1B2A86986400505BEE /* Project object */;
+}
